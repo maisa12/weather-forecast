@@ -1,0 +1,24 @@
+.Search-form {
+    display: grid;
+    grid-template-columns: 1fr 3.5rem;
+}
+
+#Search {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+#Search:focus {
+    background-color: yellow;
+    outline: none;
+}
+
+#Submit {
+    height: 3rem;
+    border: none;
+}
+
+#Search-input-box {
+    overflow: hidden;
+}

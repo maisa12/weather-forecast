@@ -1,0 +1,25 @@
+.Main-container {
+    height: calc(100vh - 2 * var(--main-container-vertical-padding));
+    background-image: linear-gradient(var(--main-container-gradient-color-top), var(--main-container-gradient-color-bottom));
+    padding-top: var(--main-container-vertical-padding);
+    padding-bottom: var(--main-container-vertical-padding);
+    padding-right: var(--main-container-horizontal-padding);
+    padding-left: var(--main-container-horizontal-padding);
+}
+
+.Content-container {
+    background: transparent;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 68% 32%;
+}
+
+.Info {
+    background-color: yellow;
+    width: 100%!important;
+}
+
+.Tools {
+    background-color: rgba(0, 0, 0, 0.1);
+    width: 100%!important;
+}
