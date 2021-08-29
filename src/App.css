@@ -12,10 +12,12 @@
     height: 100%;
     display: grid;
     grid-template-columns: 68% 32%;
+    background-image: url("./assets/weather-images/cloudy.jpg");
+    background-size: 100% 100%;
 }
 
 .Info {
-    background-color: yellow;
+    background-color: transparent;
     width: 100%!important;
 }
 

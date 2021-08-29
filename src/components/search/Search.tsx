@@ -9,7 +9,7 @@ const Search: React.FC = (): React.ReactElement => {
     return (
         <form className="Search-form" onSubmit={handleSubmit}>
             <div id="Search-input-box">
-                <input id="Search" type="test" />
+                <input id="Search" type="text" autoComplete="off" placeholder="Another location" />
             </div>
             <button id="Submit" type="submit">
                 <i className="bi bi-search"></i>
