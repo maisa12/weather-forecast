@@ -1,0 +1,13 @@
+.Recently-searched {
+    color: var(--text-color);
+    list-style-type: none;
+    padding-left: 3rem;
+}
+
+.Recently-searched-item {
+    cursor: pointer;
+}
+
+.Recently-searched-item:hover {
+    color: rgb(190, 205, 221);
+}

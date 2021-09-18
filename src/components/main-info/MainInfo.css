@@ -3,7 +3,23 @@
     bottom: 5rem;
     left: 2rem;
     color: var(--text-color);
+    font-family: cursive;
+    display: flex;
+}
+
+.Main-info .City-container {
+    display: inline-block;
+    margin-left: 2rem;
+}
+
+.Main-info .City-name {
+    font-weight: 500;
+    font-size: xx-large;
+    display: inline-block;
+}
+
+.Main-info .Temerature {
     font-weight: 500;
     font-size: -webkit-xxx-large;
-    font-family: cursive;
+    display: inline-block;
 }

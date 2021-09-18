@@ -1,3 +1,5 @@
+import { getName } from "../utils";
+
 class WeatherCondition {
     public weatherType: string;
     private backgroundImageType: string;
@@ -57,7 +59,7 @@ class Weather {
         defaultTemperatureUnit: string = "celsius"
     ) {
         this._city = city?.toLowerCase() 
-            || this.defaultCities[this.getRandomNumber(0, this.defaultCities.length - 1)];
+            || Weather.defaultCities[this.getRandomNumber(0, Weather.defaultCities.length - 1)];
         this._temperature = temperature || this.getRandomNumber(0, 10);
         this._weatherConditionType = weatherConditionType;
         this._cloudyPercent = cloudyPercent;
@@ -69,11 +71,15 @@ class Weather {
     }
 
     get cityName(): string {
-        return this._city[0].toUpperCase() +  this._city.slice(1);
+        return getName(this._city)
     }
 
     get city(): string {    
         return this._city;
+    }
+
+    get temperature(): number {
+        return this._temperature;
     }
 
     get weatherConditionType(): string {
@@ -101,7 +107,7 @@ class Weather {
         return Math.floor(Math.random() * (max - min + 1) + min);
     }
 
-    private get defaultCities(): string[] {
+    static get defaultCities(): string[] {
         return [
             "london",
             "tokyo",

@@ -1,36 +1,18 @@
 
-import { url } from "inspector";
-import React, { useState, useEffect } from "react";
+import React from "react";
 import "./App.css";
 
-import { Weather, WeatherCondition } from "./models";
-import { getWeatherCondition, getFaviconEl } from "./utils";
+import { WeatherCondition } from "./models";
+
 
 import Search from "./components/search/Search";
 import MainInfo from "./components/main-info/MainInfo";
+import  RecentlySearched from "./components/recently-searched/RecentlySearched";
 
+import { useWeatherConditionContext } from "./contexts";
 
 const App: React.FC = (): React.ReactElement => {
-  const [ weatherConditionType, setWeatherConditionType ] = useState<WeatherCondition>();
-  const [ weather, setWeather ] = useState<Weather>();
-
-  const setFaviConde = (path: string): void => {
-    const favicon: HTMLLinkElement | null = getFaviconEl();
-    if (favicon) favicon.href = path;
-  };
-  
-  useEffect(() => {
-    // call api to get weather
-    // get default cities
-    setWeather(new Weather());
-  }, []);
-
-  useEffect(() => {
-    if (!weather) return;
-    const weatherCondition = getWeatherCondition(weather.weatherConditionType);
-    setWeatherConditionType(weatherCondition);
-    setFaviConde(weatherCondition.icon);
-  }, [weather]);
+  const weatherConditionType: WeatherCondition | undefined = useWeatherConditionContext();
 
   return (
     <div className="Main-container">
@@ -39,7 +21,8 @@ const App: React.FC = (): React.ReactElement => {
             <MainInfo />
           </div>
           <div className="Tools">
-              <Search />
+            <Search />
+            <RecentlySearched />
           </div>
       </div>
     </div>
