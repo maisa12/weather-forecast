@@ -16,9 +16,22 @@ code {
 
 :root {
   --main-container-vertical-padding: 40px;
-  --main-container-horizontal-padding: 50px;
+  --main-container-horizontal-padding: 200px;
   --main-container-gradient-color-top: rgba(178,211,230,255);
   --main-container-gradient-color-bottom: rgba(50,145,204,255);
+  --text-color: rgb(233, 235, 237);
+}
+
+@media (max-width: 1200px) {
+  :root {
+    --main-container-horizontal-padding: 100px;
+  }
+}
+
+@media (max-width: 992px) {
+  :root {
+    --main-container-horizontal-padding: 40px;
+  }
 }
 
 @media (max-width: 768px) {

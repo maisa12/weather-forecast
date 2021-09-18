@@ -11,10 +11,32 @@
     background: transparent;
     height: 100%;
     display: grid;
-    grid-template-columns: 68% 32%;
-    background-image: url("./assets/weather-images/cloudy.jpg");
+    grid-template-columns: 60% 40%;
     background-size: 100% 100%;
+    position: relative;
 }
+
+
+
+@media (max-width: 992px) {
+    .Content-container {
+        background: transparent;
+        height: 100%;
+        display: grid;
+        grid-template-columns: 50% 50%;
+        background-size: 100% 100%;
+    }
+}
+
+@media (max-width: 640px) {
+    .Content-container {
+        background: transparent;
+        height: 100%;
+        display: grid;
+        grid-template-columns: 30% 70%;
+        background-size: 100% 100%;
+    }
+  }
 
 .Info {
     background-color: transparent;

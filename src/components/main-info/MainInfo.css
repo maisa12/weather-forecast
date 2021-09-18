@@ -1,0 +1,9 @@
+.Main-info {
+    position: absolute;
+    bottom: 5rem;
+    left: 2rem;
+    color: var(--text-color);
+    font-weight: 500;
+    font-size: -webkit-xxx-large;
+    font-family: cursive;
+}
